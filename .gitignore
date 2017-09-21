@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+*.swp
+local_config.js
+.DS_Store
+nomad.hcl
+
