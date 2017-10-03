@@ -7,8 +7,6 @@ const Waffle = require('@danielwpz/waffle');
 const Innjector = require('innjector');
 const logger = require('winston');
 
-const app = new Waffle();
-
 if (cluster.isMaster) {
 
   logger.info(`Master process ${process.pid} is running`);
@@ -32,10 +30,15 @@ if (cluster.isMaster) {
       process.exit(1);
     }
 
+    const config = container.get('config');
+    const app = new Waffle({
+      disable_log: config.log.disable_endpoints
+    });
+
     const vxRoute = container.get('vxRoute');
     vxRoute.mount(app);
 
     app.run(process.env.npm_package_config_port);
-  });
 
+  });
 }

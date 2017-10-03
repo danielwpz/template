@@ -28,6 +28,10 @@ job "M4_SERVICE_NAME" {
         port_map {
           http = M4_PORT
         }
+
+        logging {
+          type = "syslog"
+        }
       }
 
       resources {

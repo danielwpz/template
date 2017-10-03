@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "grunt run",
-    "start:production": "pm2-docker app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-docker": "docker build --build-arg port=$npm_package_config_port -t danielwpz/$npm_package_name:$npm_package_version .",
     "build-nomad": "m4 -DM4_PORT=$npm_package_config_port -DM4_IMAGE_NAME=$npm_package_name -DM4_VERSION=$npm_package_version -DM4_SERVICE_NAME=$npm_package_name nomad.hcl.m4 > nomad.hcl"
@@ -16,9 +15,9 @@
   "author": "Daniel Wang",
   "license": "ISC",
   "dependencies": {
-    "@danielwpz/waffle": "0.0.2",
+    "@danielwpz/waffle": "0.0.4",
     "bluebird": "^3.5.0",
-    "innjector": "0.0.2",
+    "innjector": "0.0.4",
     "winston": "^2.3.1"
   },
   "devDependencies": {

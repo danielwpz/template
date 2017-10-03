@@ -4,4 +4,4 @@ node_modules/
 local_config.js
 .DS_Store
 nomad.hcl
-
+*.tmp

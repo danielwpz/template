@@ -13,4 +13,4 @@ COPY . .
 ARG port
 EXPOSE $port
 
-CMD ["npm", "run", "start:production"]
+CMD ["pm2-docker", "app.js"]
