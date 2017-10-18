@@ -15,7 +15,7 @@
   "author": "Daniel Wang",
   "license": "ISC",
   "dependencies": {
-    "@danielwpz/waffle": "0.0.5",
+    "@danielwpz/waffle": "^0.0.6",
     "bluebird": "^3.5.0",
     "innjector": "0.0.4",
     "winston": "^2.3.1"
